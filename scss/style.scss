@@ -1,28 +1,35 @@
 //color
 $primary-color: #1b1e1f;
-$white-color: #fff;
 $red-color:red;
 $blue-color: blue;
-
-
-
+$orange-color : #c58854;
+$green-color : #88b966;
 //private classes
-%reset{
-    text-decoration: none;
-    a{
-    box-sizing: border-box;
-    }
-}
 %container{
     max-width: 1000px;
     width: 90%;
     margin:15px auto;
 }
+%wrapper {
+    border : 1px solid #3596f0;
+    border-radius: 10px;
+    padding: 10px;
+    line-height: 22px;
+    }
 //mixines
-@mixin text-style($size01,$transform,$text-color){
+@mixin text-style($size01,$transform,$text-color,$indent){
     font-size: $size01;
     text-transform: $transform;
     color: $text-color;  
+    text-indent: $indent;
+}
+@mixin img-style($img-size, $img-align){
+    width:$img-size ;
+    float: $img-align;
+}
+@mixin box-style($box-width,$box-float){
+    width:$box-width;
+    float:$box-float ;
 }
 
 body{
@@ -30,17 +37,60 @@ body{
     header{
         @extend %container;
         h1{
-            @include text-style(27px,uppercase,#fff);
+            @include text-style(27px,uppercase,#fff,0);
             text-align:center;
         }
         li{
             float:left;
             list-style: none;
+            margin-bottom: 20px;
             a{
                 text-decoration: none;
-                @include text-style(20px,uppercase,#fff);
+                @include text-style(23px,uppercase,#fff,0);
+                margin-right: 20px;
+            }
+            .red{
+                color: $red-color;
+            }
+            .blue{
+                color:$blue-color;
             }
         }
        
+    }
+    section{
+        @extend %container;
+        .box1{
+            @include box-style((94% /2), left);
+            @extend %wrapper;
+            p{
+                @include text-style(16px,none , #a4a5a5,0);
+                .orange{
+                    color:$orange-color;
+                }
+                a{
+                    text-decoration: none;
+                }
+                .green{
+                    color: $green-color;
+                }
+            }
+            img{
+                @include img-style(123px, right);
+            }
+        }
+        .box2{
+            @include box-style(((94% /2)), right);
+            @extend %wrapper;
+            p{
+                @include text-style(16px,none , #a4a5a5, 6px);
+            }
+            img{
+                @include img-style(109px, left);
+            }
+            .orange{
+                color:$orange-color;
+            }
+        }
     }
 }

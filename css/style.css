@@ -1,7 +1,13 @@
-body header {
+body header, body section {
   max-width: 1000px;
   width: 90%;
   margin: 15px auto; }
+
+body section .box1, body section .box2 {
+  border: 1px solid #3596f0;
+  border-radius: 10px;
+  padding: 10px;
+  line-height: 22px; }
 
 body {
   background-color: #1b1e1f; }
@@ -9,12 +15,50 @@ body {
     font-size: 27px;
     text-transform: uppercase;
     color: #fff;
+    text-indent: 0;
     text-align: center; }
   body header li {
     float: left;
-    list-style: none; }
+    list-style: none;
+    margin-bottom: 20px; }
     body header li a {
       text-decoration: none;
-      font-size: 20px;
+      font-size: 23px;
       text-transform: uppercase;
-      color: #fff; }
+      color: #fff;
+      text-indent: 0;
+      margin-right: 20px; }
+    body header li .red {
+      color: red; }
+    body header li .blue {
+      color: blue; }
+  body section .box1 {
+    width: 47%;
+    float: left; }
+    body section .box1 p {
+      font-size: 16px;
+      text-transform: none;
+      color: #a4a5a5;
+      text-indent: 0; }
+      body section .box1 p .orange {
+        color: #c58854; }
+      body section .box1 p a {
+        text-decoration: none; }
+      body section .box1 p .green {
+        color: #88b966; }
+    body section .box1 img {
+      width: 123px;
+      float: right; }
+  body section .box2 {
+    width: 47%;
+    float: right; }
+    body section .box2 p {
+      font-size: 16px;
+      text-transform: none;
+      color: #a4a5a5;
+      text-indent: 6px; }
+    body section .box2 img {
+      width: 109px;
+      float: left; }
+    body section .box2 .orange {
+      color: #c58854; }
