@@ -1,0 +1,20 @@
+body header {
+  max-width: 1000px;
+  width: 90%;
+  margin: 15px auto; }
+
+body {
+  background-color: #1b1e1f; }
+  body header h1 {
+    font-size: 27px;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center; }
+  body header li {
+    float: left;
+    list-style: none; }
+    body header li a {
+      text-decoration: none;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: #fff; }

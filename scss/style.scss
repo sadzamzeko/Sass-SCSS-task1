@@ -1,0 +1,46 @@
+//color
+$primary-color: #1b1e1f;
+$white-color: #fff;
+$red-color:red;
+$blue-color: blue;
+
+
+
+//private classes
+%reset{
+    text-decoration: none;
+    a{
+    box-sizing: border-box;
+    }
+}
+%container{
+    max-width: 1000px;
+    width: 90%;
+    margin:15px auto;
+}
+//mixines
+@mixin text-style($size01,$transform,$text-color){
+    font-size: $size01;
+    text-transform: $transform;
+    color: $text-color;  
+}
+
+body{
+    background-color: $primary-color;
+    header{
+        @extend %container;
+        h1{
+            @include text-style(27px,uppercase,#fff);
+            text-align:center;
+        }
+        li{
+            float:left;
+            list-style: none;
+            a{
+                text-decoration: none;
+                @include text-style(20px,uppercase,#fff);
+            }
+        }
+       
+    }
+}
